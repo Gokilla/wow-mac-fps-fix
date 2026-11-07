@@ -1,0 +1,38 @@
+# World of Warcraft — "120 FPS, clean image" CVars for Apple Silicon Macs + 4K/high-refresh displays.
+# Tested: MacBook Pro 16" M2 Max (38-core GPU, 32 GB), macOS 27.0, Dell S3225QS 4K 120 Hz, WoW Forever client.
+#
+# How to apply:
+#   1. Quit the game completely (Cmd+Q) — WoW rewrites Config.wtf on exit.
+#   2. Open  /Applications/World of Warcraft/<_retail_|_classic_|_forever_>/WTF/Config.wtf
+#   3. Replace / add these lines, save, start the game.
+#
+# --- Resolution: render 1080p internally, upscale to 4K with FSR 1.0 + sharpening (clean 2× scale) ---
+SET RenderScale "0.5"
+SET ResampleQuality "3"
+SET ResampleAlwaysSharpen "1"
+SET gxWindow "1"
+SET GxMaximize "1"
+# --- Frame pacing ---
+SET vsync "0"
+SET maxFPS "120"
+SET maxFPSBk "30"
+SET hardwareCursor "0"
+# --- Sharp textures (cheap) ---
+SET graphicsTextureResolution "2"
+SET textureFilteringMode "5"
+# --- Effects off / minimum (biggest FPS wins) ---
+SET ffxAntiAliasingMode "1"
+SET graphicsShadowQuality "0"
+SET graphicsSSAO "0"
+SET graphicsDepthEffects "0"
+SET graphicsComputeEffects "0"
+SET graphicsLiquidDetail "0"
+SET graphicsPBRLiquidDetail "0"
+SET graphicsParticleDensity "1"
+SET graphicsSpellDensity "0"
+SET graphicsProjectedTextures "0"
+SET graphicsLightMode "0"
+# --- World (CPU side). Raise view distance to 4–6 if trees pop in close; 2 = max FPS ---
+SET graphicsViewDistance "5"
+SET graphicsEnvironmentDetail "2"
+SET graphicsGroundClutter "0"
